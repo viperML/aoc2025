@@ -12,13 +12,13 @@ function(DAY name)
     target_sources(
         ${name}
         PUBLIC
-        "./${name}/main.cpp"
-        "./common/aoc-common.cpp"
+        ${name}.cpp
+        "aoc-common.cpp"
     )
     target_include_directories(
         ${name}
         PRIVATE
-        ./common
+        .
     )
     target_compile_options(${name} PRIVATE -Werror -Wpedantic)
 
